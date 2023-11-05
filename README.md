@@ -4,7 +4,7 @@ Online Store
 
 ## Developed by
 
-Kelompok 1
+Kelompok 1 Fp2
 
 1. Ali Rosi - RCTN-KS08-020
 2. Fajarudin Zakariya - RCTN-KS08-13
