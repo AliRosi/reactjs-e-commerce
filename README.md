@@ -1,5 +1,7 @@
 # OneStore
 
+Online Store
+
 ## Developed by
 
 Kelompok 1
