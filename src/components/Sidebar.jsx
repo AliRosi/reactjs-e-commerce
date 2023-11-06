@@ -1,5 +1,5 @@
 import { Stack, Box } from "@chakra-ui/layout";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Icon } from "@chakra-ui/react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { MdDevicesOther } from "react-icons/md";

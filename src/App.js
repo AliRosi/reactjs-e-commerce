@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Routes, useNavigate, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import React, { useEffect, useState } from "react";
@@ -6,6 +6,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import "./assets/css/tailwind.css";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import DetailProduct from "./pages/DetailProduct";
 
 function App() {
   const navigate = useNavigate();
@@ -67,6 +70,27 @@ function App() {
             handleClickBtnLogin={handleClickBtnLogin}
             handleLogout={handleLogout}
           />
+          <Routes>
+            <Route
+              path="/"
+              name="home"
+              useLayout={true}
+              exact={true}
+              element={<Home />}
+            />
+            <Route
+              path="/login"
+              name="login"
+              protectedRoute={false}
+              element={<Login />}
+            />
+            <Route
+              path="/:id"
+              name="detail-product"
+              useLayout={true}
+              element={<DetailProduct />}
+            />
+          </Routes>
         </div>
       </div>
     </ChakraProvider>
