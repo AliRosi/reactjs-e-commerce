@@ -9,6 +9,14 @@ import "./assets/css/tailwind.css";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import DetailProduct from "./pages/DetailProduct";
+import MensCloth from "./pages/MensCloth";
+import Jewelry from "./pages/Jewelry";
+import Electronics from "./pages/Electronics";
+import WomensCloth from "./pages/WomensCloth";
+import Searched from "./pages/Searched";
+import EditStock from "./pages/EditStock";
+import Report from "./pages/Report";
+import Cart from "./pages/Cart";
 
 function App() {
   const navigate = useNavigate();
@@ -89,6 +97,54 @@ function App() {
               name="detail-product"
               useLayout={true}
               element={<DetailProduct />}
+            />
+              <Route
+              path="/mens-cloth"
+              name="mens-cloth"
+              useLayout={true}
+              element={<MensCloth />}
+            />
+            <Route
+              path="/jewelry"
+              name="jewelry"
+              useLayout={true}
+              element={<Jewelry />}
+            />
+            <Route
+              path="/electronics"
+              name="electronics"
+              useLayout={true}
+              element={<Electronics />}
+            />
+            <Route
+              path="/womens-cloth"
+              name="womens-cloth"
+              useLayout={true}
+              element={<WomensCloth />}
+            />
+            <Route
+              path="/searched"
+              name="searched"
+              useLayout={true}
+              element={<Searched />}
+            />
+            <Route
+              path="/stock"
+              name="stock"
+              useLayout={true}
+              element={<EditStock />}
+            />
+            <Route
+              path="/report"
+              name="cart"
+              useLayout={true}
+              element={<Report />}
+            />
+            <Route
+              path="/cart"
+              name="report"
+              useLayout={true}
+              element={<Cart />}
             />
           </Routes>
         </div>
