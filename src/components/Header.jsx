@@ -76,7 +76,7 @@ const Header = ({
               onClick={() => setIsShowLogout(!isShowLogout)}
             />
             {isShowLogout && (
-              <div className="p-2 bg-orange-100 rounded-lg absolute right-11 top-3 md:right-3">
+              <div className="p-2 bg-orange-200 rounded-lg absolute right-11 top-3 md:right-3">
                 <p
                   className="px-2 py-1 rounded-md bg-black-200 cursor-pointer"
                   onClick={handleLogout}
