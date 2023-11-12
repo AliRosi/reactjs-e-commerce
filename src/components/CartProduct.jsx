@@ -18,22 +18,22 @@ const CartProduct = ({
   stock,
 }) => {
   return (
-    <Box p="4" className="shadow-lg text-gray-600 rounded-lg">
+    <Box p="4" className="text-gray-600 rounded-lg shadow-lg">
       <div className="flex flex-row mb-3">
         <Image
           src={image}
           alt="product"
-          className="object-contain h-16 md:h-40 bg-white bg-opacity-40"
+          className="object-contain h-16 bg-white md:h-40 bg-opacity-40"
         />
 
-        <Box px="3" className="w-full flex flex-col justify-between">
+        <Box px="3" className="flex flex-col justify-between w-full">
           <div className="space-y-2">
             <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight">
               {title}
             </Box>
             <Box className="font-semibold">$ {price}</Box>
           </div>
-          <div className="space-x-5 flex flex-row justify-between items-center relative">
+          <div className="relative flex flex-row items-center justify-between space-x-5">
             <img
               src={LogoTrash}
               width="30px"
@@ -43,8 +43,8 @@ const CartProduct = ({
               onClick={() => handleRemoveItem(id)}
             />
             {stock - count < 5 && (
-              <p className="absolute -top-7 right-5 text-sm text-red-500">
-                Stock sisa {stock - count}
+              <p className="absolute text-sm text-red-500 -top-7 right-5">
+                Stock tersisa {stock - count}
               </p>
             )}
             <Stack

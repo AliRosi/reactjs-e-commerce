@@ -94,10 +94,10 @@ const Cart = () => {
   }, []);
 
   return (
-    <div className="w-full p-2 md:p-12 lg:p-12 xl:p-12 space-y-8 md:space-y-16 lg:space-y-16 xl:space-y-16">
+    <div className="w-full p-2 space-y-8 md:p-12 lg:p-12 xl:p-12 md:space-y-16 lg:space-y-16 xl:space-y-16">
       <h1 className="text-xl font-semibold text-gray-600">Cart</h1>
-      <div className="flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-10">
-        <div className="space-y-3 w-full lg:w-7/12">
+      <div className="flex flex-col space-y-5 lg:flex-row lg:space-y-0 lg:space-x-10">
+        <div className="w-full space-y-3 lg:w-7/12">
           {products.length > 0 ? (
             products.map((product) => (
               <CartProduct
@@ -114,7 +114,7 @@ const Cart = () => {
               />
             ))
           ) : (
-            <p className="text-2xl font-semibold">Anda belum memilih item</p>
+            <p className="text-2xl font-semibold">Anda belum memilih Barang</p>
           )}
         </div>
         {products.length > 0 && (
@@ -122,7 +122,7 @@ const Cart = () => {
             width={["100%", "40%"]}
             className="flex flex-col space-y-1 text-gray-700 h-80"
           >
-            <Box className="space-y-3 w-full shadow-lg rounded-lg p-4">
+            <Box className="w-full p-4 space-y-3 rounded-lg shadow-lg">
               <Text className="font-bold text-gray-600" fontSize="30px">
                 Order summary
               </Text>
@@ -134,8 +134,8 @@ const Cart = () => {
                       className="flex flex-row items-center space-x-3"
                       key={product.id}
                     >
-                      <p className="font-xs flex-grow text-gray-600">{`${product.title} x ${product.count}`}</p>
-                      <p className="font-xs text-gray-600 text-right">{`$${(
+                      <p className="flex-grow text-gray-600 font-xs">{`${product.title} x ${product.count}`}</p>
+                      <p className="text-right text-gray-600 font-xs">{`$${(
                         product.price * product.count
                       ).toFixed(2)}`}</p>
                     </div>
@@ -143,17 +143,17 @@ const Cart = () => {
                 })}
               <div className="border-b border-gray-800" />
               <div className="flex flex-row items-center">
-                <p className="font-sm flex-grow text-gray-600">{`Subtotal `}</p>
-                <p className="font-sm text-gray-600">{`$ ${subTotal().toFixed(
+                <p className="flex-grow text-gray-600 font-sm">{`Subtotal `}</p>
+                <p className="text-gray-600 font-sm">{`$ ${subTotal().toFixed(
                   2
                 )}`}</p>
               </div>
               <div className="flex flex-row items-center">
-                <p className="font-sm flex-grow text-gray-600">{`Tax `}</p>
-                <p className="font-sm text-gray-600">{`$ ${tax()}`}</p>
+                <p className="flex-grow text-gray-600 font-sm">{`Tax `}</p>
+                <p className="text-gray-600 font-sm">{`$ ${tax()}`}</p>
               </div>
               <div className="flex flex-row items-center">
-                <p className="font-semibold flex-grow text-gray-600">{`Total `}</p>
+                <p className="flex-grow font-semibold text-gray-600">{`Total `}</p>
                 <p className="font-semibold text-gray-600">{`$ ${totalPayment()}`}</p>
               </div>
               <Button
