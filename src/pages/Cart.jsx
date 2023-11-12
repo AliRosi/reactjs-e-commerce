@@ -126,7 +126,7 @@ const Cart = () => {
               <Text className="font-bold text-gray-600" fontSize="30px">
                 Order summary
               </Text>
-              <div className="border-b border-gray-800" />
+              <div className="border-b border-gray-700" />
               {products.length > 0 &&
                 products.map((product) => {
                   return (
