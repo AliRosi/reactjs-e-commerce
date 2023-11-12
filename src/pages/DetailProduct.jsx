@@ -78,7 +78,7 @@ const DetailProduct = () => {
       setProduct(detailProduct);
     };
     testProduct();
-  }, [count, params.id]);
+  }, [allProducts, count, params.id]);
 
   return (
     <div className="w-full p-2 md:p-8 lg:p-8 xl:p-8 space-y-8 md:space-y-16 lg:space-y-16 xl:space-y-16 max-w-full">
