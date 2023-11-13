@@ -29,6 +29,7 @@ Pass    : kev02937@
 ```
 Username : admin
 Pass     : admin123
+```
 
 ## Developed by
 
@@ -45,4 +46,3 @@ Studi Independen Bersertifikat oleh Kampus Merdeka Batch 5
 ## Kelas
 
 React and React Native for Front End Developer - Hacktiv8 Indonesia
-```
