@@ -51,7 +51,7 @@ const CardProduct = ({
               .map((_, i) => (
                 <StarIcon
                   key={i}
-                  color={i < rating.rate ? "yellow.300" : "gray.300"}
+                  color={i < rating.rate ? "orange.300" : "gray.300"}
                 />
               ))}
             <Box as="span" ml="2" color="gray.600" fontSize="sm">
