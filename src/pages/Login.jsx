@@ -97,7 +97,7 @@ const Login = () => {
           <Button
             isLoading={loading}
             type="submit"
-            backgroundColor="orange"
+            backgroundColor="orange.300"
             style={{ width: "100%" }}
           >
             Sign In

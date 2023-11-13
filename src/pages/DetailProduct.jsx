@@ -102,7 +102,7 @@ const DetailProduct = () => {
                     <StarIcon
                       key={i}
                       color={
-                        i < product.rating.rate ? "orange.200" : "gray.300"
+                        i < product.rating.rate ? "orange.300" : "gray.300"
                       }
                     />
                   ))}
@@ -133,7 +133,7 @@ const DetailProduct = () => {
             >
               <Button
                 isDisabled={count === 0}
-                bg="red.100"
+                bg="red.200"
                 className="shadow-lg"
                 onClick={handleSubtract}
               >
@@ -142,7 +142,7 @@ const DetailProduct = () => {
               <p className="text-xl font-bold">{count}</p>
               <Button
                 isDisabled={product.stock - count === 0}
-                bg="orange.100"
+                bg="orange.200"
                 className="shadow-lg"
                 onClick={handleAdd}
               >
@@ -150,7 +150,7 @@ const DetailProduct = () => {
               </Button>
             </Stack>
             <Button
-              bg="orange.100"
+              bg="orange.300"
               className="shadow-lg"
               variant="solid"
               mt="5"
