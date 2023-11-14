@@ -7,7 +7,7 @@ import OtherProducts from "../components/OtherProducts";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ADD_CART_ITEMS, ADD_COUNT_ITEM } from "../store/sliecrs/cart";
-import { isAuthenticated } from "../libs/helpers/auth";
+import { isAuthenticated, isAdmin } from "../libs/helpers/auth";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { UPDATE_ITEM_STOCK } from "../store/sliecrs/products";
@@ -41,6 +41,16 @@ const DetailProduct = () => {
   };
 
   const handleAddToCart = () => {
+    if (isAdmin()) {
+      toast({
+        title: "Admin cannot add products to the cart.",
+        status: "error",
+        duration: 3000,
+        position: "top",
+        isClosable: true,
+      });
+      return;
+    }
     if (isAuthenticated()) {
       const selectedItem = { ...product, count };
       const sameItemInCart =
@@ -155,11 +165,11 @@ const DetailProduct = () => {
               variant="solid"
               mt="5"
               w="full"
-              disabled={count === 0}
+              disabled={!isAuthenticated() || count === 0}
               onClick={handleAddToCart}
             >
               <Icon as={AiOutlineShoppingCart} w="20px" h="20px" mx="5" />
-              Add to Cart
+              {isAuthenticated() ? "Add to Cart" : "Login to Add to Cart"}
             </Button>
           </Box>
         </div>

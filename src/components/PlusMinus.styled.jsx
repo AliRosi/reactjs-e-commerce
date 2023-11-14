@@ -31,10 +31,10 @@ export const Tombol = css`
   left: 0;
 `;
 
-export const PlusBiru = styled.div`
+export const PlusOren = styled.div`
   ${Tombol};
   ${TombolReuse};
-  background-color: #c6cfff;
+  background-color: #fbd38d;
 `;
 
 export const PlusGray = styled.div`
@@ -46,6 +46,6 @@ export const PlusGray = styled.div`
 export const MinusMerah = styled.div`
   ${Tombol};
   ${TombolReuse};
-  background-color: #ffc6c6;
+  background-color: #feb2b2;
   padding: 0 15px 4px 15px;
 `;
