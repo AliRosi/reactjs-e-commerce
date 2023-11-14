@@ -63,7 +63,7 @@ const Sidebar = ({ isOpen }) => {
     <div
       className={`w-72 h-full p-6 text-black-600 ${
         isOpen
-          ? "block bg-orange-100 md:bg-orange-200 z-50 md:z-0 h-screen md:h-auto fixed md:relative top-0 md:top-auto"
+          ? "block bg-orange-200 md:bg-orange-200 z-50 md:z-0 h-screen md:h-auto fixed md:relative top-0 md:top-auto"
           : "hidden"
       } md:block`}
     >

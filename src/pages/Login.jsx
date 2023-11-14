@@ -6,6 +6,7 @@ import { http } from "../libs/services/http";
 import { useNavigate } from "react-router-dom";
 import { isAuthenticated } from "../libs/helpers/auth";
 import { useEffect } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const method = "post";
 const url = "auth/login";
@@ -24,6 +25,7 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -60,6 +62,10 @@ const Login = () => {
     setLoading(false);
   };
 
+  const toggleShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <div className="min-h-screen flex px-5 pb-5 md:p-0 md:flex-row md:space-x-10 items-center justify-center">
       <div className="bg-white p-5 lg:p-10 rounded-md shadow-lg w-full md:w-6/12 lg:w-5/12 xl:w-4/12">
@@ -80,6 +86,7 @@ const Login = () => {
               onChange={(e) => setUsername(e.target.value)}
               className="w-full border-2 border-gray-500 p-3 rounded outline-none focus:border-orange-500"
               label="beli"
+              placeholder="kevinryan | admin"
             />
           </div>
 
@@ -87,11 +94,29 @@ const Login = () => {
             <label className="block mb-1 font-bold text-gray-500">
               Password
             </label>
-            <input
-              type="password"
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full border-2 border-gray-500 p-3 rounded outline-none focus:border-orange-500"
-            />
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full border-2 border-gray-500 p-3 rounded outline-none focus:border-orange-500"
+                placeholder="kev02937@ | admin123"
+              />
+              {password && (
+                <div className="absolute top-1/2 transform -translate-y-1/2 right-4 text-gray-500">
+                  {showPassword ? (
+                    <FaEyeSlash
+                      className="cursor-pointer"
+                      onClick={toggleShowPassword}
+                    />
+                  ) : (
+                    <FaEye
+                      className="cursor-pointer"
+                      onClick={toggleShowPassword}
+                    />
+                  )}
+                </div>
+              )}
+            </div>
           </div>
 
           <Button

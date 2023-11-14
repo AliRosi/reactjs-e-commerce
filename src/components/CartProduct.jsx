@@ -4,7 +4,7 @@ import { Stack } from "@chakra-ui/react";
 import React from "react";
 import LogoTrash from "../assets/images/trash.svg";
 /** @jsxImportSource @emotion/react */
-import { PlusBiru, PlusGray, MinusMerah } from "./PlusMinus.styled";
+import { PlusOren, PlusGray, MinusMerah } from "./PlusMinus.styled";
 
 const CartProduct = ({
   id,
@@ -53,9 +53,7 @@ const CartProduct = ({
               align="center"
               className="space-x-5"
             >
-              <MinusMerah onClick={() => handleClickSubtract(id)}>
-                -
-              </MinusMerah>
+              <MinusMerah onClick={() => handleClickSubtract(id)}>-</MinusMerah>
               <p className="text-xl font-bold">{count}</p>
               {stock - count === 0 ? (
                 <PlusGray
@@ -64,11 +62,7 @@ const CartProduct = ({
                   +
                 </PlusGray>
               ) : (
-                <PlusBiru
-                  onClick={() => handleClickAdd(id)}
-                >
-                  +
-                </PlusBiru>
+                <PlusOren onClick={() => handleClickAdd(id)}>+</PlusOren>
               )}
             </Stack>
           </div>

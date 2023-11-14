@@ -157,7 +157,7 @@ const Cart = () => {
                 <p className="font-semibold text-gray-600">{`$ ${totalPayment()}`}</p>
               </div>
               <Button
-                backgroundColor="#C6CFFF"
+                backgroundColor="orange.300"
                 width="full"
                 variant="solid"
                 children="Beli"
